@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment">
+
+    <EditText
+        android:id="@+id/etSearchBar"
+        android:drawableStart="@drawable/search_icon_1"
+        android:drawablePadding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="@string/search_bar_hint"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:fontFamily="@font/redditsans_variablefont_wght"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTimeRange"
+        app:cardBackgroundColor="@color/background_lighter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTimeHint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/time_hint"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="@font/redditsans_variablefont_wght"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <EditText
+                android:id="@+id/etTimeBegin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="0dp"
+                android:hint="8000 BCE"
+                android:inputType="text"
+                android:textSize="25sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTimeHint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvTo" />
+
+            <TextView
+                android:id="@+id/tvTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="to"
+                android:textSize="25sp"
+                android:fontFamily="@font/redditsans_variablefont_wght"
+                app:layout_constraintTop_toTopOf="@+id/etTimeBegin"
+                app:layout_constraintBottom_toBottomOf="@+id/etTimeBegin"
+                app:layout_constraintStart_toEndOf="@+id/etTimeBegin"
+                app:layout_constraintEnd_toStartOf="@+id/etTimeEnd"
+                app:layout_constraintHorizontal_chainStyle="packed" />
+
+            <EditText
+                android:id="@+id/etTimeEnd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:hint="2025"
+                android:inputType="text"
+                android:textSize="25sp"
+                app:layout_constraintTop_toTopOf="@+id/etTimeBegin"
+                app:layout_constraintBottom_toBottomOf="@+id/etTimeBegin"
+                app:layout_constraintStart_toEndOf="@+id/tvTo"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFilterPublicDomain"
+        app:cardBackgroundColor="@color/background_lighter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardFilterOnView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvFilterPublicDomainHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_header_public_domain"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupPublicDomain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:selectionRequired="true"
+                app:singleSelection="true"
+                android:layout_gravity="center_horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPublicDomainAny"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    android:textColor="@color/chip_text_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:text="@string/filter_chip_any"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/redditsans_variablefont_wght" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPublicDomainTrue"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    android:textColor="@color/chip_text_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/filter_chip_true"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/redditsans_variablefont_wght" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPublicDomainFalse"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    android:textColor="@color/chip_text_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/filter_chip_false"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/redditsans_variablefont_wght" />
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFilterOnView"
+        app:cardBackgroundColor="@color/background_lighter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardTimeRange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvFilerOnViewHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_header_on_view"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupOnView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:selectionRequired="true"
+                app:singleSelection="true"
+                android:layout_gravity="center_horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOnViewAny"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    android:textColor="@color/chip_text_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:text="@string/filter_chip_any"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/redditsans_variablefont_wght" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOnViewTrue"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    android:textColor="@color/chip_text_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/filter_chip_true"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/redditsans_variablefont_wght" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOnViewFalse"
+                    app:chipBackgroundColor="@color/chip_selector"
+                    android:textColor="@color/chip_text_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="@string/filter_chip_false"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/redditsans_variablefont_wght" />
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/enter_button"
+        android:fontFamily="@font/redditsans_variablefont_wght"
+        android:textSize="31sp"
+        app:icon="@drawable/arrow_right_icon"
+        app:iconPadding="8dp"
+        app:iconGravity="textEnd"
+        android:gravity="center_vertical"
+        app:iconSize="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

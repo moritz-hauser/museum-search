@@ -1,0 +1,233 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/background_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back_button"
+                android:textSize="20sp"
+                android:fontFamily="@font/redditsans_variablefont_wght"
+                app:icon="@drawable/arrow_left_icon"
+                app:iconPadding="4dp"
+                app:iconGravity="textStart"
+                android:gravity="center_vertical"
+                android:backgroundTint="@color/primary"
+                app:iconSize="24dp" />
+
+
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/domine_variablefont_wght"
+                android:textColor="@color/secondary" />
+        </LinearLayout>
+
+        <io.getstream.photoview.PhotoView
+            android:id="@+id/imgDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <!-- Artist -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Artist:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+
+            <TextView
+                android:id="@+id/tvDetailArtistTitle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+        </LinearLayout>
+
+        <!-- Year -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Year:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+
+            <TextView
+                android:id="@+id/tvDetailYear"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+        </LinearLayout>
+
+        <!-- Style -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Style:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+
+            <TextView
+                android:id="@+id/tvDetailStyleTitle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+        </LinearLayout>
+
+        <!-- Department -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Department:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+
+            <TextView
+                android:id="@+id/tvDetailDepartment"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+        </LinearLayout>
+
+        <!-- On View -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="On View:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+
+            <TextView
+                android:id="@+id/tvDetailOnView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+        </LinearLayout>
+
+        <!-- Public Domain -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Public Domain:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+
+            <TextView
+                android:id="@+id/tvDetailPublicDomain"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/redditsans_variablefont_wght" />
+
+            <TextView
+                android:id="@+id/tvDetailDescription"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/redditsans_variablefont_wght"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+

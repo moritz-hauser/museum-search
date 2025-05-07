@@ -1,0 +1,27 @@
+<resources>
+    <!-- App Name und Header -->
+    <string name="app_name">HCI_A2</string>
+    <string name="header_name">ArtSearch</string>
+
+    <!-- Suchleiste und Button -->
+    <string name="search_bar_hint">Looking for an artwork?</string>
+    <string name="enter_button">Show results</string>
+
+    <!-- Rück-Button -->
+    <string name="back_button">Back</string>
+
+    <!-- Zeit-Filter -->
+    <string name="time_hint">Looking for a specific time period?</string>
+
+    <!-- Filterüberschriften -->
+    <string name="filter_header_public_domain">Should the artworks be in the public domain?</string>
+    <string name="filter_header_on_view">Should the artworks be currently on view?</string>
+
+    <!-- Chip Labels -->
+    <string name="filter_chip_any">Doesn’t matter</string>
+    <string name="filter_chip_true">Yes</string>
+    <string name="filter_chip_false">No</string>
+
+    <!-- Ergebnisse -->
+    <string name="results_search_info_default">No artworks matched your search.</string>
+</resources>

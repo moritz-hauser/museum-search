@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HCI_A2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+        <item name="rippleColor">@color/primary</item>
+        <item name="android:windowBackground">@color/background_main</item>
+        <item name="colorSurface">@color/background_main</item>
+    </style>
+
+    <style name="Theme.HCI_A2" parent="Base.Theme.HCI_A2" />
+</resources>
