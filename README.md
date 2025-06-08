@@ -8,8 +8,16 @@ Developed for the University of Vienna course Human-Computer-Interaction.
 - Detail view with image and metadata
 - Tab-based UI with search and result views
 
-# Screenshots
-*todo*
+## Screenshots
+
+### Search View
+![Search View](screenshots/search_page.jpg)
+
+### Results View
+![Results View](screenshots/results_page.jpg)
+
+### Detail View
+![Detail View](screenshots/detail_page.jpg)
 
 ## Setup
 1. Clone the repo
